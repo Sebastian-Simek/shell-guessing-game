@@ -1,9 +1,23 @@
-#hidden1{
+
+.ball {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;  
     display: none;
+    margin: 25px;
+    
 }
-#hidden2{
-    display: none;
+.shell.reveal .ball {
+    display: block;
 }
-#hidden3{
-    display: none;
+.shell{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.shell-container{
+    display: flex;
 }

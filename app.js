@@ -7,10 +7,9 @@ const winSpan = document.getElementById ('wins');
 const lossSpan = document.getElementById ('losses');
 const totalSpan = document.getElementById ('total');
 
-const ballOne = document.getAnimations ('hidden1');
-const ballTwo = document.getAnimations ('hidden2');
-const ballThree = document.getAnimations ('hidden3');
-
+const shellOne = document.getElementById ('shell-1');
+const shellTwo = document.getElementById ('shell-2');
+const shellThree = document.getElementById ('shell-3');
 // let state
 let wins = 0;
 let losses = 0;
@@ -26,9 +25,10 @@ let losses = 0;
 
 buttonOne.addEventListener('click', () => {
     const randomGuess = Math.ceil(Math.random() * 3);
-    
+
     if (randomGuess === 1) {
         wins++;
+        shellOne.classList.add('reveal');
     } else { 
         losses++;
     }
@@ -38,11 +38,13 @@ buttonOne.addEventListener('click', () => {
     totalSpan.textContent = wins + losses;
 });  
 
+
 buttonTwo.addEventListener('click', () => {
     const randomGuess = Math.ceil(Math.random() * 3);
-  
-    if (randomGuess === 1) {
+
+    if (randomGuess === 2) {
         wins++;
+        shellTwo.classList.add('reveal');
     } else { 
         losses++;
     }
@@ -54,9 +56,10 @@ buttonTwo.addEventListener('click', () => {
 
 buttonThree.addEventListener('click', () => {
     const randomGuess = Math.ceil(Math.random() * 3);
-  
-    if (randomGuess === 1) {
+
+    if (randomGuess === 3) {
         wins++;
+        shellThree.classList.add('reveal');
     } else { 
         losses++;
     }
