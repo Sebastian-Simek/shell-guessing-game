@@ -22,6 +22,23 @@ let losses = 0;
 
   // if button 1 = the random number, increase wins by one. ***later*** hide and reveal the ball
 //const randomGuess = Math.ceil(Math.random() * 3); 
+buttonOne.addEventListener('click', () => {
+    shellOne.classList.remove('reveal');
+    shellTwo.classList.remove('reveal');
+    shellThree.classList.remove('reveal');
+});
+buttonTwo.addEventListener('click', () => {
+    shellOne.classList.remove('reveal');
+    shellTwo.classList.remove('reveal');
+    shellThree.classList.remove('reveal');
+}
+);
+buttonThree.addEventListener('click', () => {
+    shellOne.classList.remove('reveal');
+    shellTwo.classList.remove('reveal');
+    shellThree.classList.remove('reveal');
+}
+);
 
 buttonOne.addEventListener('click', () => {
     const randomGuess = Math.ceil(Math.random() * 3);
@@ -68,3 +85,4 @@ buttonThree.addEventListener('click', () => {
     lossSpan.textContent = losses;
     totalSpan.textContent = wins + losses;
 });  
+
