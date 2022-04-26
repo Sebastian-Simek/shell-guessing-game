@@ -1,3 +1,6 @@
+.shell-container{
+    display: flex;
+}
 
 .ball {
     background-color: red;
@@ -6,24 +9,20 @@
     border-radius: 50%;  
     display: none;
     margin: 25px;
-    
-    
-}
-.shell.reveal .ball {
-    display: block;
-}
-.shell{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-}
-
-.shell-container{
-    display: flex;
 }
 
 .buttons{
     padding: 1em;
     margin: 2em;
+}
+
+.shell.reveal .ball {
+    display: block;
+}
+
+.shell{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; 
 }

@@ -17,28 +17,7 @@ const removeReveal = () => {
     shellThree.classList.remove('reveal');
 };
 
-// const gameLogic = () => {
-//     const randomGuess = Math.ceil(Math.random() * 3);
-//     if (randomGuess === 1) {
-//         wins++;
-//         shellOne.classList.add('reveal');
-//     } else if (randomGuess === 2) { 
-//         losses++;
-//         shellTwo.classList.add('reveal');
-//     } else {
-//         losses++;
-//         shellThree.classList.add('reveal');
-//     }
-//     winSpan.textContent = wins;
-//     lossSpan.textContent = losses;
-//     totalSpan.textContent = wins + losses;
-// };  
-
-buttonOne.addEventListener('click', removeReveal);
-buttonTwo.addEventListener('click', removeReveal);
-buttonThree.addEventListener('click', removeReveal);
-
-buttonOne.addEventListener('click', () => {
+const gameLogic = (num1, num2,) => {
     const randomGuess = Math.ceil(Math.random() * 3);
     if (randomGuess === 1) {
         wins++;
@@ -53,39 +32,19 @@ buttonOne.addEventListener('click', () => {
     winSpan.textContent = wins;
     lossSpan.textContent = losses;
     totalSpan.textContent = wins + losses;
+};  
+
+buttonOne.addEventListener('click', () => {
+    removeReveal();
+    gameLogic(1, 2);
 });  
 
 buttonTwo.addEventListener('click', () => {
-    const randomGuess = Math.ceil(Math.random() * 3);
-    if (randomGuess === 2) {
-        wins++;
-        shellTwo.classList.add('reveal');
-    } else if (randomGuess === 1) { 
-        losses++;
-        shellOne.classList.add('reveal');
-    } else {
-        losses++;
-        shellThree.classList.add('reveal');
-    }
-    winSpan.textContent = wins;
-    lossSpan.textContent = losses;
-    totalSpan.textContent = wins + losses;
+    removeReveal();
+    gameLogic(2, 1);
 });  
 
 buttonThree.addEventListener('click', () => {
-    const randomGuess = Math.ceil(Math.random() * 3);
-    if (randomGuess === 3) {
-        wins++;
-        shellThree.classList.add('reveal');
-    } else if (randomGuess === 2) { 
-        losses++;
-        shellTwo.classList.add('reveal');
-    } else {
-        losses++;
-        shellOne.classList.add('reveal');
-    }
-    winSpan.textContent = wins;
-    lossSpan.textContent = losses;
-    totalSpan.textContent = wins + losses;
-});  
-
+    removeReveal();
+    gameLogic(3, 2);
+});
