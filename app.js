@@ -17,12 +17,12 @@ const removeReveal = () => {
     shellThree.classList.remove('reveal');
 };
 
-const gameLogic = (num1, num2) => {
+const gameLogic = (buttonX, buttonY) => {
     const randomGuess = Math.ceil(Math.random() * 3);
-    if (randomGuess === num1) {
+    if (randomGuess === buttonX) {
         wins++;
         shellOne.classList.add('reveal');
-    } else if (randomGuess === num2) { 
+    } else if (randomGuess === buttonY) { 
         losses++;
         shellTwo.classList.add('reveal');
     } else {
