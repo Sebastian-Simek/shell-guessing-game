@@ -46,8 +46,12 @@ buttonOne.addEventListener('click', () => {
     if (randomGuess === 1) {
         wins++;
         shellOne.classList.add('reveal');
-    } else { 
+    } else if (randomGuess === 2) { 
         losses++;
+        shellTwo.classList.add('reveal');
+    } else {
+        losses++;
+        shellThree.classList.add('reveal');
     }
 
     winSpan.textContent = wins;
@@ -62,8 +66,12 @@ buttonTwo.addEventListener('click', () => {
     if (randomGuess === 2) {
         wins++;
         shellTwo.classList.add('reveal');
-    } else { 
+    } else if (randomGuess === 1) { 
         losses++;
+        shellOne.classList.add('reveal');
+    } else {
+        losses++;
+        shellThree.classList.add('reveal');
     }
 
     winSpan.textContent = wins;
@@ -77,8 +85,12 @@ buttonThree.addEventListener('click', () => {
     if (randomGuess === 3) {
         wins++;
         shellThree.classList.add('reveal');
-    } else { 
+    } else if (randomGuess === 2) { 
         losses++;
+        shellTwo.classList.add('reveal');
+    } else {
+        losses++;
+        shellOne.classList.add('reveal');
     }
 
     winSpan.textContent = wins;
