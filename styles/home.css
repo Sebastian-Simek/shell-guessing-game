@@ -1,1 +1,28 @@
-/* add home page styles here */
+.shell-container{
+    display: flex;
+}
+
+.ball {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;  
+    display: none;
+    margin: 25px;
+}
+
+.buttons{
+    padding: 1em;
+    margin: 2em;
+}
+
+.shell.reveal .ball {
+    display: block;
+}
+
+.shell{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative; 
+}
