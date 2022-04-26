@@ -11,21 +11,32 @@ const shellThree = document.getElementById ('shell-3');
 let wins = 0;
 let losses = 0;
 
-buttonOne.addEventListener('click', () => {
+const removeReveal = () => {
     shellOne.classList.remove('reveal');
     shellTwo.classList.remove('reveal');
     shellThree.classList.remove('reveal');
-});
-buttonTwo.addEventListener('click', () => {
-    shellOne.classList.remove('reveal');
-    shellTwo.classList.remove('reveal');
-    shellThree.classList.remove('reveal');
-});
-buttonThree.addEventListener('click', () => {
-    shellOne.classList.remove('reveal');
-    shellTwo.classList.remove('reveal');
-    shellThree.classList.remove('reveal');
-});
+};
+
+// const gameLogic = () => {
+//     const randomGuess = Math.ceil(Math.random() * 3);
+//     if (randomGuess === 1) {
+//         wins++;
+//         shellOne.classList.add('reveal');
+//     } else if (randomGuess === 2) { 
+//         losses++;
+//         shellTwo.classList.add('reveal');
+//     } else {
+//         losses++;
+//         shellThree.classList.add('reveal');
+//     }
+//     winSpan.textContent = wins;
+//     lossSpan.textContent = losses;
+//     totalSpan.textContent = wins + losses;
+// };  
+
+buttonOne.addEventListener('click', removeReveal);
+buttonTwo.addEventListener('click', removeReveal);
+buttonThree.addEventListener('click', removeReveal);
 
 buttonOne.addEventListener('click', () => {
     const randomGuess = Math.ceil(Math.random() * 3);
